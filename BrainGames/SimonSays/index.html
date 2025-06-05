@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="simon.css">
+</head>
+<body>
+    <!-- Mode Selection Screen -->
+   <div id="mode-selection" class="screen flex flex-col items-center justify-center gap-8 py-10 px-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-lg shadow-2xl">
+    <h1 class="text-4xl font-extrabold drop-shadow-md">🎮 Simon Memory Game</h1>
+    <h2 class="text-2xl font-semibold">Select Game Mode</h2>
+
+    <div class="mode-options flex flex-col sm:flex-row gap-6 mt-6 w-full max-w-xl justify-center">
+        <!-- Classic Mode Button -->
+        <button id="classic-mode"
+                class="mode-btn flex flex-col items-center justify-center gap-2 p-6 w-full sm:w-1/2 rounded-xl bg-white text-indigo-700 font-bold text-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-indigo-300"
+                aria-label="Classic Mode - Follow the sequence">
+            <span class="text-3xl">🕹️</span>
+            <span>Classic Mode</span>
+            <p class="text-sm font-medium text-gray-600 mt-1">Follow the growing sequence</p>
+        </button>
+
+        <!-- Timed Mode Button -->
+        <button id="timed-mode"
+                class="mode-btn flex flex-col items-center justify-center gap-2 p-6 w-full sm:w-1/2 rounded-xl bg-white text-pink-700 font-bold text-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-pink-300"
+                aria-label="Timed Challenge - Beat the clock">
+            <span class="text-3xl">⏱️</span>
+            <span>Timed Challenge</span>
+            <p class="text-sm font-medium text-gray-600 mt-1">Beat the clock at each level</p>
+        </button>
+    </div>
+</div>
+
+
+    <!-- Main Game Screen (initially hidden) -->
+    <div id="game-screen" class="screen hidden">
+        <h1>Simon Game</h1> 
+        <h2 id="game-status">Press any key to start the game</h2>
+        
+        <div class="controls">
+            <div class="difficulty">
+                <h3>Difficulty:</h3>
+                <button id="easy-btn" class="difficulty-btn active">Easy</button>
+                <button id="medium-btn" class="difficulty-btn">Medium</button>
+                <button id="hard-btn" class="difficulty-btn">Hard</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h3 id="level-display">Level: 0</h3>
+            <h3 id="timer-display" class="hidden">Time Left: 30</h3>
+            <h3 id="high-score">High Score: 0</h3>
+        </div>
+
+        <div class="container">
+            <div class="btn-up">
+                <div id="green" class="btn">1</div>
+                <div id="red" class="btn">2</div>
+            </div>
+        
+            <div class="btn-low">
+                <div id="yellow" class="btn">3</div>
+                <div id="blue" class="btn">4</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="simon.js"></script>
+</body>
+</html>

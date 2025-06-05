@@ -3,7 +3,7 @@ A web-based project with 3 interactive mini-games to boost memory, focus, and re
 
 
 ## 🚀 Live Demo
-Check out the live version hosted on Netlify: [https://your-brain-games-project.netlify.app](https://your-brain-games-project.netlify.app)  
+Check out the live version hosted on Netlify: coming soon! 
 *(Replace the above link with your actual Netlify URL)*
 
 ---

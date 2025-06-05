@@ -1,0 +1,113 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    border: 10px solid black;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    text-align: center;
+    line-height: 200px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#green {
+    background-color: #008000;
+}
+#red {
+    background-color: #FF0000;
+}
+#yellow {
+    background-color: #FFFF00;
+}
+#blue {
+    background-color: #0000FF;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flash {
+    background-color: white !important;
+    transform: scale(0.95);
+}
+
+.game-over {
+    background-color: red;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+.difficulty-btn, .mode-btn {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ddd;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.difficulty-btn.active, .mode-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.stats {
+    margin: 20px 0;
+}
+
+.timed-flash {
+    animation: timedFlash 1s infinite;
+}
+
+@keyframes timedFlash {
+    0% { color: black; }
+    50% { color: red; }
+    100% { color: black; }
+}
+
+.mode-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.mode-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+}
